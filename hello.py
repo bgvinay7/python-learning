@@ -4,6 +4,8 @@ print("Python executable is on D drive.")
 name='vina  '
 age=38
 
+
+
 #f-strings
 print(f"my name in {name.strip()} age is {age}")
 
@@ -123,6 +125,7 @@ person["age"] = 36
 print(person)
 del person["city"]
 print(person)
+person["noneKey"] = None
 
 if "name" in person:
     print("Found")
@@ -133,7 +136,9 @@ else:
     print("not found")
 
 for key, value in person.items():
+    print("#")
     print(key, value)
+    print("#")
 print(f"keys {person.keys()}")
 print(f"values {person.values()}")
 
@@ -154,3 +159,33 @@ groups["A"].append("Apple")
 groups["A"].append("Avocado")
 groups["B"].append("Banana")
 print(groups)
+
+a="10fjkfl"
+b=a
+print(type(a))
+print(f"{(a)} and {(b)}")
+print(f"{id(a)} and {id(b)}")
+b=20
+print(type(b))
+print(f"{id(a)} and {id(b)}")
+print(f"{(a)} and {(b)}")
+
+# Create an empty dictionary to hold the variables
+my_vars = {}
+
+# Loop 10 times to generate names like var_1, var_2, etc.
+for i in range(1, 11):
+    my_vars[f"var_{i}"] = f"Value {i}"
+
+# Accessing a specific variable
+print(my_vars["var_5"])  # Output: Value 5
+
+print(my_vars)
+
+a="bangalore"
+b="mysore"
+print(f"{a}-{id(a)} and {b}-{id(b)}")
+b="delhi"
+c="mysore"
+
+print(f"{c}-{id(c)} and {b}-{id(b)}")
