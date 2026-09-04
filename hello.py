@@ -61,9 +61,26 @@ print(numbers)
 
 numbers.pop(0)
 print(f"after poop {numbers}")
-numbers.sort()
-print(numbers)
+#numbers.sort()
+numbers.sort(reverse=True)
+print("sorting---",numbers)
+#print("decendingsorting---",numbers.sort(reverse=True))
 
+words = ["banana", "pie", "apple", "watermelon"]
+
+words.sort(key=len, reverse=False)#len is the function length of the words
+print("words ",words)
+
+data = [("Alice", 25), ("Bob", 19), ("Charlie", 32)]
+tuple_sort = data.sort()
+print("tuple sorting",tuple_sort)#return none , we need specific key to compare the value 
+# x[1] references the second element (the age)
+sorted_data = sorted(data, key=lambda x: x[1], reverse=True)
+
+print("tuple sorting",sorted_data)
+"""
+testing comments
+"""
 numbers.reverse()
 print(numbers)
 print(numbers[1:3])
@@ -147,6 +164,7 @@ from collections import Counter
 numbers = [1,1,1,2,2, 2, 2, 3, 3, 3]
 
 count = Counter(numbers)
+print("count specific value",numbers.count(1))
 
 print(count)
 
@@ -158,7 +176,7 @@ groups = defaultdict(list)
 groups["A"].append("Apple")
 groups["A"].append("Avocado")
 groups["B"].append("Banana")
-print(groups)
+print("groups",groups)
 
 a="10fjkfl"
 b=a
@@ -189,3 +207,29 @@ b="delhi"
 c="mysore"
 
 print(f"{c}-{id(c)} and {b}-{id(b)}")
+
+a = "vinay"
+print("hello"+a)
+print("hello",a)
+print(f"hello {a}")
+print("---")
+print("hello {}".format(a))
+print("---")
+print("apple \t\tmangoes")
+print("apple \n\nmangoes")
+
+print("bangalore","mysore")
+print("bangalore","mysore","belgaum",sep=',')
+print("bangalore","mysore","belgaum",end="!!!")
+print("a"*10)
+print("hello"*3)
+
+
+print("hello".center(20,"-"))
+print("hello".capitalize())
+print("hello".upper())
+print("hello".count("l"))
+print("hello".count("e"))
+print("hello".count("el"))
+print("hello".encode())
+print("HELLO".lower())
